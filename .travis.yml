@@ -1,0 +1,9 @@
+---
+sudo: required
+services:
+  - docker
+install:
+  - docker build -t mvisonneau/r10k:latest .
+  - docker run -d --name r10k mvisonneau/r10k:latest
+script:
+  - docker ps | grep -q geminabox && echo "CONTAINER BUILT & RUNNING SUCCESSFULLY" || echo "CONTAINER NOT RUNNING"
