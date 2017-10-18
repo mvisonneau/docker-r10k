@@ -9,5 +9,5 @@ This image allows you to use `r10k` within a container.
 ## Usage
 
 ```
-docker run -it --rm mvisonneau/r10k
+docker run -it --rm mvisonneau/r10k deploy
 ```
